@@ -1,0 +1,86 @@
+{
+    "rabbit_version": "3.8.12",
+    "rabbitmq_version": "3.8.12",
+    "product_name": "RabbitMQ",
+    "product_version": "3.8.12",
+    "users": [
+      {
+        "name": "admin",
+        "password": "100%admin",
+        "tags": "administrator"
+      },
+      {
+        "name": "guest",
+        "password": "guest",
+        "tags": "administrator"
+      }
+    ],
+    "vhosts": [
+      {
+        "name": "/"
+      }
+    ],
+    "permissions": [
+      {
+        "user": "admin",
+        "vhost": "/",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+      },
+       {
+        "user": "guest",
+        "vhost": "/",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+      }
+    ],
+    "topic_permissions": [
+  
+    ],
+    "parameters": [
+  
+    ],
+    "policies": [
+  
+    ],
+    "exchanges": [
+      {
+        "name": "tutorial_exchange",
+        "vhost": "/",
+        "type": "topic",
+        "durable": false,
+        "auto_delete": false,
+        "internal": false,
+        "arguments": {}
+    
+      }
+    ],
+    "queues": [
+      {
+        "name": "java_queue",
+        "vhost": "/",
+        "durable": false,
+        "auto_delete": false,
+        "arguments": {}
+      },
+      {
+        "name": "python_queue",
+        "vhost": "/",
+        "durable": false,
+        "auto_delete": false,
+        "arguments": {}
+      },
+      {
+        "name": "mongodb_queue",
+        "vhost": "/",
+        "durable": false,
+        "auto_delete": false,
+        "arguments": {}
+      },
+    ],
+    "bindings": [
+      
+    ]
+  }
